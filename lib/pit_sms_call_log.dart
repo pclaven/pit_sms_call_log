@@ -40,7 +40,11 @@ class PitSmsCallLog {
           callType: callLog[Constant.CALL_TYPE],
           callNumber: callLog[Constant.CALL_NUMBER],
           callDate: callLog[Constant.CALL_DATE],
-          callDuration: callLog[Constant.CALL_DURATION]));
+          callDuration: callLog[Constant.CALL_DURATION],
+          callerName: callLog[Constant.CALLER_NAME],
+          cachedFormattedNumber: callLog[Constant.CACHED_FORMATTED_NUMBER],
+          cachedMatchedNumber: callLog[Constant.CACHED_MATCHED_NUMBER],
+          cachedNumberLabel: callLog[Constant.CACHED_NUMBER_LABEL]));
     });
 
     return result;
@@ -56,6 +60,10 @@ class Constant {
   static const CALL_NUMBER = "number";
   static const CALL_DATE = "date";
   static const CALL_DURATION = "duration";
+  static const CALLER_NAME = "unknown";
+  static const CACHED_MATCHED_NUMBER = "unknown";
+  static const CACHED_FORMATTED_NUMBER = "unknown";
+  static const CACHED_NUMBER_LABEL = "unknown";
 }
 
 class SmsLog {
