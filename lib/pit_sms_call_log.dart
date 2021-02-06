@@ -60,10 +60,10 @@ class Constant {
   static const CALL_NUMBER = "number";
   static const CALL_DATE = "date";
   static const CALL_DURATION = "duration";
-  static const CALLER_NAME = "unknown";
-  static const CACHED_MATCHED_NUMBER = "unknown";
-  static const CACHED_FORMATTED_NUMBER = "unknown";
-  static const CACHED_NUMBER_LABEL = "unknown";
+  static const CALLER_NAME = "name";
+  static const CACHED_MATCHED_NUMBER = "matched_number";
+  static const CACHED_FORMATTED_NUMBER = "formatted_number";
+  static const CACHED_NUMBER_LABEL = "numberlabel";
 }
 
 class SmsLog {
