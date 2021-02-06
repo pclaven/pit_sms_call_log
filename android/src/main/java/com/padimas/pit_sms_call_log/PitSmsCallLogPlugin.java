@@ -79,10 +79,10 @@ public class PitSmsCallLogPlugin implements MethodCallHandler {
                 CallLog.Calls.NUMBER,
                 CallLog.Calls.DATE,
                 CallLog.Calls.DURATION,
-                CallLog.Calls.CACHED_NAME ?? '',
-                CallLog.Calls.CACHED_MATCHED_NUMBER ? '',
-                CallLog.Calls.CACHED_FORMATTED_NUMBER ? '',
-                CallLog.Calls.CACHED_NUMBER_LABEL ? ''
+                CallLog.Calls.CACHED_NAME,
+                CallLog.Calls.CACHED_MATCHED_NUMBER,
+                CallLog.Calls.CACHED_FORMATTED_NUMBER,
+                CallLog.Calls.CACHED_NUMBER_LABEL
 
 
         };
