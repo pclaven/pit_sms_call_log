@@ -78,8 +78,27 @@ public class PitSmsCallLogPlugin implements MethodCallHandler {
                 CallLog.Calls.TYPE,
                 CallLog.Calls.NUMBER,
                 CallLog.Calls.DATE,
-                CallLog.Calls.DURATION
+                CallLog.Calls.DURATION,
+                CallLog.Calls.CACHED_NAME ?? '',
+                CallLog.Calls.CACHED_MATCHED_NUMBER ? '',
+                CallLog.Calls.CACHED_FORMATTED_NUMBER ? '',
+                CallLog.Calls.CACHED_NUMBER_LABEL ? ''
+
+
         };
+        /*Call
+            CallLog(
+      {this.callType,
+      this.callNumber,
+      this.callDate,
+      this.callDuration,
+      this.callerName,
+      this.cachedMatchedNumber,
+      this.cachedFormattedNumber,
+      this.cachedNumberLabel,
+      this.cachedName});
+
+        */
 
             Cursor cursor = context.getContentResolver().query(CallLog.Calls.CONTENT_URI, projections,
                     condition, null, null);
@@ -162,6 +181,9 @@ public class PitSmsCallLogPlugin implements MethodCallHandler {
             case CallLog.Calls.MISSED_TYPE:
                 callType = "MISSED";
                 break;
+            case CallLog.Calls.REJECTED_TYPE:
+            callType = "REJECTED";
+            break;
         }
         return callType;
     }
