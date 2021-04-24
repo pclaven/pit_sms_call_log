@@ -67,22 +67,22 @@ class Constant {
 }
 
 class SmsLog {
-  final String body; // SMS message
-  final String address; //SMS Sender
-  final int date; //
+  final String? body; // SMS message
+  final String? address; //SMS Sender
+  final int? date; //
 
   SmsLog({this.address, this.body, this.date});
 }
 
 class CallLog {
-  final String callType;
-  final String callNumber;
-  final String callerName;
-  final String cachedMatchedNumber;
-  final String cachedFormattedNumber;
-  final String cachedNumberLabel;
-  final int callDate;
-  final int callDuration;
+  final String? callType;
+  final String? callNumber;
+  final String? callerName;
+  final String? cachedMatchedNumber;
+  final String? cachedFormattedNumber;
+  final String? cachedNumberLabel;
+  final int? callDate;
+  final int? callDuration;
 
   CallLog(
       {this.callType,
